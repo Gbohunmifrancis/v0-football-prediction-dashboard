@@ -14,14 +14,14 @@ public class MLTrainingService
     private readonly FplDbContext _context;
     private readonly ILogger<MLTrainingService> _logger;
     private readonly LSTMPredictionService _lstmService;
-    private readonly XgBoostPredictionService _xgboostService;
+    private readonly XGBoostPredictionService _xgboostService;
     private readonly EnsemblePredictionService _ensembleService;
 
     public MLTrainingService(
         FplDbContext context,
         ILogger<MLTrainingService> logger,
         LSTMPredictionService lstmService,
-        XgBoostPredictionService xgboostService,
+        XGBoostPredictionService xgboostService,
         EnsemblePredictionService ensembleService)
     {
         _context = context;
