@@ -117,6 +117,10 @@ public class MLPredictionManagerService
                     .ToList();
                 
                 _logger.LogInformation("🔍 Generating predictions for {PlayerCount} available players using ML ensemble", players.Count);
+                
+                // Log some status examples
+                var statusSample = players.Take(5).Select(p => new { p.Name, p.Status }).ToList();
+                _logger.LogInformation("📝 Sample player statuses: {Statuses}", System.Text.Json.JsonSerializer.Serialize(statusSample));
             }
             else
             {
@@ -125,6 +129,7 @@ public class MLPredictionManagerService
             }
 
             var predictions = new List<PlayerPredictionResult>();
+            var errorCount = 0;
 
             // Generate ML predictions for each player
             foreach (var player in players)
@@ -148,9 +153,12 @@ public class MLPredictionManagerService
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogWarning(ex, "Error predicting for player {PlayerId}", player.Id);
+                    errorCount++;
+                    _logger.LogWarning(ex, "Error predicting for player {PlayerName} (ID: {PlayerId})", player.WebName, player.Id);
                 }
             }
+
+            _logger.LogInformation("✅ Generated {SuccessCount} predictions ({ErrorCount} errors)", predictions.Count, errorCount);
 
             // Categorize predictions by position and performance
             result.TopPerformers = predictions.OrderByDescending(p => p.PredictedPoints * p.Confidence).Take(15).ToList();
