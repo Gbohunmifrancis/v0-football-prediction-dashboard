@@ -1,0 +1,57 @@
+// Program.cs fix for ML endpoints - commenting out problematic sections temporarily
+// This file contains the corrected sections to replace in Program.cs
+
+// Replace the problematic ML endpoint section with this corrected version:
+/*
+// 🚀 NEW ML-POWERED PREDICTION ENDPOINTS (Phase 2A Complete) - TEMPORARILY DISABLED
+// Uncomment and fix these endpoints once all ML services are fully implemented
+
+app.MapGet("/api/ml/predictions/gameweek/{gameweek}", async (int gameweek, MLPredictionManagerService mlManager) =>
+    {
+        var predictions = await mlManager.GenerateMLGameweekPredictionsAsync(gameweek);
+        
+        return Results.Ok(new
+        {
+            gameweek = predictions.Gameweek,
+            model_type = predictions.ModelType,
+            generated_at = predictions.PredictionDate,
+            summary = $"🧠 ML-powered predictions for gameweek {gameweek}",
+            top_performers = predictions.TopPerformers,
+            by_position = new
+            {
+                goalkeepers = predictions.TopGoalkeepers,
+                defenders = predictions.TopDefenders,
+                midfielders = predictions.TopMidfielders,
+                forwards = predictions.TopForwards
+            },
+            insights = new
+            {
+                best_value = predictions.BestValue,
+                differentials = predictions.Differentials,
+                avoid_list = predictions.HighRisk
+            }
+        });
+    })
+    .WithName("GetMLGameweekPredictions")
+    .WithTags("🧠 ML Predictions")
+    .WithSummary("Get advanced ML-powered predictions using LSTM + XGBoost ensemble")
+    .WithOpenApi();
+
+// Comment out the problematic individual player ML prediction endpoint
+// app.MapGet("/api/ml/player/{playerId}/prediction/{gameweek}", async (int playerId, int gameweek, MLPredictionManagerService mlManager) => {
+//     // This endpoint needs to be fixed once the ML services are properly implemented
+//     return Results.Ok(new { message = "ML prediction endpoint under development" });
+// });
+
+*/
+
+// Replace the quick-check endpoint historical_data section with this:
+/*
+            historical_data = new
+            {
+                historical_performances = await context.HistoricalPlayerPerformances.CountAsync(),
+                historical_team_strengths = await context.HistoricalTeamStrengths.CountAsync(),
+                injury_updates = await context.InjuryUpdates.CountAsync(),
+                transfer_news = await context.TransferNews.CountAsync()
+            },
+*/

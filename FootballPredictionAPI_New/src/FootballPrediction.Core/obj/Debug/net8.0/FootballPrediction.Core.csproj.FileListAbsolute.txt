@@ -1,0 +1,13 @@
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\bin\Debug\net8.0\FootballPrediction.Core.deps.json
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\bin\Debug\net8.0\FootballPrediction.Core.dll
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\bin\Debug\net8.0\FootballPrediction.Core.pdb
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\obj\Debug\net8.0\FootballPrediction.Core.csproj.AssemblyReference.cache
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\obj\Debug\net8.0\FootballPrediction.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\obj\Debug\net8.0\FootballPrediction.Core.AssemblyInfoInputs.cache
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\obj\Debug\net8.0\FootballPrediction.Core.AssemblyInfo.cs
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\obj\Debug\net8.0\FootballPrediction.Core.csproj.CoreCompileInputs.cache
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\obj\Debug\net8.0\FootballPrediction.Core.sourcelink.json
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\obj\Debug\net8.0\FootballPrediction.Core.dll
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\obj\Debug\net8.0\refint\FootballPrediction.Core.dll
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\obj\Debug\net8.0\FootballPrediction.Core.pdb
+C:\Users\FRANCIS GBOHUNMI\Desktop\PROJECTS\football-prediction\FootballPredictionAPI_New\src\FootballPrediction.Core\obj\Debug\net8.0\ref\FootballPrediction.Core.dll
