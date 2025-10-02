@@ -110,7 +110,7 @@ builder.Services.AddScoped<LSTMPredictionService>();
 builder.Services.AddScoped<XgBoostPredictionService>(); // Fixed naming
 builder.Services.AddScoped<EnsemblePredictionService>();
 builder.Services.AddScoped<MLPredictionManagerService>();
-builder.Services.AddScoped<MLTrainingService>(); // ML Training Service
+// builder.Services.AddScoped<MLTrainingService>(); // ML Training Service - Commented out until implemented
 
 // 🧠 NEW: Register RAG Services (Phase 2B) - Commented out until implemented
 // builder.Services.AddScoped<FootballKnowledgeBaseService>();
