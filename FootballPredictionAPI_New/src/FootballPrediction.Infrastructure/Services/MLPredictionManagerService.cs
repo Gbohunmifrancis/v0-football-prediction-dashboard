@@ -100,14 +100,29 @@ public class MLPredictionManagerService
                 ModelType = "Advanced ML Ensemble"
             };
 
-            // Get all active players
+            // Get all players (Status values: "a" = available, "d" = doubtful, "i" = injured, "s" = suspended, "u" = unavailable)
+            // First, try to get active players
             var players = await _context.Players
                 .Include(p => p.Team)
                 .Include(p => p.GameweekPerformances)
-                .Where(p => p.Status == "available" || string.IsNullOrEmpty(p.Status))
                 .ToListAsync();
 
-            _logger.LogInformation("🔍 Generating predictions for {PlayerCount} players using ML ensemble", players.Count);
+            _logger.LogInformation("📊 Total players in database: {TotalCount}", players.Count);
+
+            // Filter out only truly unavailable players if we have data
+            if (players.Any())
+            {
+                players = players
+                    .Where(p => p.Status != "u" && p.Status != "s") // Exclude unavailable and suspended
+                    .ToList();
+                
+                _logger.LogInformation("🔍 Generating predictions for {PlayerCount} available players using ML ensemble", players.Count);
+            }
+            else
+            {
+                _logger.LogWarning("⚠️ No players found in database!");
+                return result;
+            }
 
             var predictions = new List<PlayerPredictionResult>();
 
