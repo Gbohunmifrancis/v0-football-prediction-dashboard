@@ -168,6 +168,18 @@ public class EnhancedPredictionResult
     public DateTime PredictionDate { get; set; }
 }
 
+// Simple prediction result for ML.NET services
+public class PredictionResult
+{
+    public int PlayerId { get; set; }
+    public string PlayerName { get; set; } = string.Empty;
+    public int Gameweek { get; set; }
+    public double PredictedPoints { get; set; }
+    public double Confidence { get; set; }
+    public string Method { get; set; } = string.Empty;
+    public Dictionary<string, double> Features { get; set; } = new();
+}
+
 // Ensemble prediction result
 public class EnsemblePredictionResult
 {

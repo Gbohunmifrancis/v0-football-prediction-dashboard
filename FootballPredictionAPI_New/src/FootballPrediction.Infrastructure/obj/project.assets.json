@@ -88,6 +88,31 @@
           }
         }
       },
+      "LightGBM/3.3.5": {
+        "type": "package",
+        "build": {
+          "build/LightGBM.props": {},
+          "build/LightGBM.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/lib_lightgbm.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/lib_lightgbm.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/lib_lightgbm.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/lightgbm.exe": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
@@ -731,7 +756,8 @@
           }
         },
         "build": {
-          "build/netstandard2.0/_._": {}
+          "build/netstandard2.0/Microsoft.ML.props": {},
+          "build/netstandard2.0/Microsoft.ML.targets": {}
         },
         "runtimeTargets": {
           "runtimes/linux-arm/native/libLdaNative.so": {
@@ -854,6 +880,148 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.ML.DataView.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.ML.FastTree/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ML": "4.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ML.FastTree.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.FastTree.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/netstandard2.0/Microsoft.ML.FastTree.props": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libFastTreeNative.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libFastTreeNative.so.dbg": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/libFastTreeNative.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libFastTreeNative.dylib.dwarf": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/FastTreeNative.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/FastTreeNative.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Microsoft.ML.LightGbm/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "LightGBM": "3.3.5",
+          "Microsoft.ML": "4.0.2",
+          "Microsoft.ML.FastTree": "4.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ML.LightGbm.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.LightGbm.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.ML.Mkl.Redist/4.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libMklImports.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libMklProxyNative.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libMklProxyNative.so.dbg": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/libMklImports.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libMklProxyNative.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libMklProxyNative.dylib.dwarf": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/MklImports.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/MklProxyNative.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/libiomp5md.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/MklImports.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/MklProxyNative.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/libiomp5md.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Microsoft.ML.TimeSeries/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ML": "4.0.2",
+          "Microsoft.ML.Mkl.Redist": "4.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ML.TimeSeries.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.TimeSeries.dll": {
             "related": ".xml"
           }
         }
@@ -1436,6 +1604,23 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "LightGBM/3.3.5": {
+      "sha512": "6LwKO13R9q8zZHbYNeHhayUj3/sN410L6B9QZfV/tyzuoaddur1Uy0yV0gK4FfLl3FVC0LxnfiCOrHva0xX3yQ==",
+      "type": "package",
+      "path": "lightgbm/3.3.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/LightGBM.props",
+        "build/LightGBM.targets",
+        "lightgbm.3.3.5.nupkg.sha512",
+        "lightgbm.nuspec",
+        "runtimes/linux-x64/native/lib_lightgbm.so",
+        "runtimes/osx-x64/native/lib_lightgbm.dylib",
+        "runtimes/win-x64/native/lib_lightgbm.dll",
+        "runtimes/win-x64/native/lightgbm.exe"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
@@ -2498,6 +2683,90 @@
         "mlnetlogo.png"
       ]
     },
+    "Microsoft.ML.FastTree/4.0.2": {
+      "sha512": "a/1kEgAqGakxE5DZCh9Xk4XJeyjaowUV4JpgZW6LJAQvufRp/4ZHAUDXJE4T1sOHoFzWsmPeBqDAlzlAgKH6Eg==",
+      "type": "package",
+      "path": "microsoft.ml.fasttree/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/netstandard2.0/Microsoft.ML.FastTree.props",
+        "lib/netstandard2.0/Microsoft.ML.FastTree.dll",
+        "lib/netstandard2.0/Microsoft.ML.FastTree.xml",
+        "microsoft.ml.fasttree.4.0.2.nupkg.sha512",
+        "microsoft.ml.fasttree.nuspec",
+        "mlnetlogo.png",
+        "runtimes/linux-x64/native/libFastTreeNative.so",
+        "runtimes/linux-x64/native/libFastTreeNative.so.dbg",
+        "runtimes/osx-x64/native/libFastTreeNative.dylib",
+        "runtimes/osx-x64/native/libFastTreeNative.dylib.dwarf",
+        "runtimes/win-x64/native/FastTreeNative.dll",
+        "runtimes/win-x86/native/FastTreeNative.dll"
+      ]
+    },
+    "Microsoft.ML.LightGbm/4.0.2": {
+      "sha512": "2vaz6k2jwgDedUw9iaSOoqGdo+OYAI+y4P14uWBHmMnybkuo6udW8esAuRwW2bi/fRWxIPHKxjOLwRADg9zwTw==",
+      "type": "package",
+      "path": "microsoft.ml.lightgbm/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard2.0/Microsoft.ML.LightGbm.dll",
+        "lib/netstandard2.0/Microsoft.ML.LightGbm.xml",
+        "microsoft.ml.lightgbm.4.0.2.nupkg.sha512",
+        "microsoft.ml.lightgbm.nuspec",
+        "mlnetlogo.png"
+      ]
+    },
+    "Microsoft.ML.Mkl.Redist/4.0.2": {
+      "sha512": "SUXhH7OdbMTvnHMEISqCudIcbolQeSyq2icnlBc1GUdhUDy/q/8itbQ/qpnOdQLTlKbUqF2lzM/ChlQVz2CRaQ==",
+      "type": "package",
+      "path": "microsoft.ml.mkl.redist/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "build/netstandard2.0/Microsoft.ML.Mkl.Redist.props",
+        "lib/netstandard2.0/_._",
+        "microsoft.ml.mkl.redist.4.0.2.nupkg.sha512",
+        "microsoft.ml.mkl.redist.nuspec",
+        "mlnetlogo.png",
+        "runtimes/linux-x64/native/libMklImports.so",
+        "runtimes/linux-x64/native/libMklProxyNative.so",
+        "runtimes/linux-x64/native/libMklProxyNative.so.dbg",
+        "runtimes/osx-x64/native/libMklImports.dylib",
+        "runtimes/osx-x64/native/libMklProxyNative.dylib",
+        "runtimes/osx-x64/native/libMklProxyNative.dylib.dwarf",
+        "runtimes/win-x64/native/MklImports.dll",
+        "runtimes/win-x64/native/MklProxyNative.dll",
+        "runtimes/win-x64/native/libiomp5md.dll",
+        "runtimes/win-x86/native/MklImports.dll",
+        "runtimes/win-x86/native/MklProxyNative.dll",
+        "runtimes/win-x86/native/libiomp5md.dll"
+      ]
+    },
+    "Microsoft.ML.TimeSeries/4.0.2": {
+      "sha512": "kvEA81gXW6iX8owvlX0bGipDejEdpqVcaPmTD8KJioc2m6/SdUdx5HfdjikSiWqo1yHYyaQmX5yZBC6lEs9HTg==",
+      "type": "package",
+      "path": "microsoft.ml.timeseries/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard2.0/Microsoft.ML.TimeSeries.dll",
+        "lib/netstandard2.0/Microsoft.ML.TimeSeries.xml",
+        "microsoft.ml.timeseries.4.0.2.nupkg.sha512",
+        "microsoft.ml.timeseries.nuspec",
+        "mlnetlogo.png"
+      ]
+    },
     "Mono.TextTemplating/2.2.1": {
       "sha512": "KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "type": "package",
@@ -3087,7 +3356,11 @@
       "Microsoft.EntityFrameworkCore >= 8.0.20",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.20",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.20",
-      "Microsoft.EntityFrameworkCore.Tools >= 8.0.20"
+      "Microsoft.EntityFrameworkCore.Tools >= 8.0.20",
+      "Microsoft.ML >= 4.0.2",
+      "Microsoft.ML.FastTree >= 4.0.2",
+      "Microsoft.ML.LightGbm >= 4.0.2",
+      "Microsoft.ML.TimeSeries >= 4.0.2"
     ]
   },
   "packageFolders": {
@@ -3159,6 +3432,22 @@
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
             "version": "[8.0.20, )"
+          },
+          "Microsoft.ML": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          },
+          "Microsoft.ML.FastTree": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          },
+          "Microsoft.ML.LightGbm": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          },
+          "Microsoft.ML.TimeSeries": {
+            "target": "Package",
+            "version": "[4.0.2, )"
           }
         },
         "imports": [

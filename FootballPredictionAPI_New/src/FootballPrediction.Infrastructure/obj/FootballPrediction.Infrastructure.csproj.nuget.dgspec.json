@@ -134,6 +134,22 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[8.0.20, )"
+            },
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Microsoft.ML.FastTree": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Microsoft.ML.LightGbm": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Microsoft.ML.TimeSeries": {
+              "target": "Package",
+              "version": "[4.0.2, )"
             }
           },
           "imports": [

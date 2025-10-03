@@ -178,6 +178,30 @@
           }
         }
       },
+      "LightGBM/3.3.5": {
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/lib_lightgbm.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/lib_lightgbm.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/lib_lightgbm.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/lightgbm.exe": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/8.0.19": {
         "dependencies": {
           "Microsoft.OpenApi": "1.6.14"
@@ -1019,6 +1043,138 @@
           }
         }
       },
+      "Microsoft.ML.FastTree/4.0.2": {
+        "dependencies": {
+          "Microsoft.ML": "4.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.FastTree.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "4.0.225.12505"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libFastTreeNative.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libFastTreeNative.so.dbg": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libFastTreeNative.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libFastTreeNative.dylib.dwarf": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/FastTreeNative.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.2200.225.12505"
+          },
+          "runtimes/win-x86/native/FastTreeNative.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.2200.225.12505"
+          }
+        }
+      },
+      "Microsoft.ML.LightGbm/4.0.2": {
+        "dependencies": {
+          "LightGBM": "3.3.5",
+          "Microsoft.ML": "4.0.2",
+          "Microsoft.ML.FastTree": "4.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.LightGbm.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "4.0.225.12505"
+          }
+        }
+      },
+      "Microsoft.ML.Mkl.Redist/4.0.2": {
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libMklImports.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libMklProxyNative.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libMklProxyNative.so.dbg": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libMklImports.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libMklProxyNative.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libMklProxyNative.dylib.dwarf": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/MklImports.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "2021.3.1.0"
+          },
+          "runtimes/win-x64/native/MklProxyNative.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.2200.225.12505"
+          },
+          "runtimes/win-x64/native/libiomp5md.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "5.0.2018.913"
+          },
+          "runtimes/win-x86/native/MklImports.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "2021.3.1.0"
+          },
+          "runtimes/win-x86/native/MklProxyNative.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.2200.225.12505"
+          },
+          "runtimes/win-x86/native/libiomp5md.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "5.0.2018.913"
+          }
+        }
+      },
+      "Microsoft.ML.TimeSeries/4.0.2": {
+        "dependencies": {
+          "Microsoft.ML": "4.0.2",
+          "Microsoft.ML.Mkl.Redist": "4.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.TimeSeries.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "4.0.225.12505"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.OpenApi/1.6.14": {
@@ -1611,7 +1767,11 @@
           "Microsoft.EntityFrameworkCore": "9.0.9",
           "Microsoft.EntityFrameworkCore.Design": "9.0.9",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.9",
-          "Microsoft.EntityFrameworkCore.Tools": "9.0.9"
+          "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+          "Microsoft.ML": "4.0.2",
+          "Microsoft.ML.FastTree": "4.0.2",
+          "Microsoft.ML.LightGbm": "4.0.2",
+          "Microsoft.ML.TimeSeries": "4.0.2"
         },
         "runtime": {
           "FootballPrediction.Infrastructure.dll": {
@@ -1690,6 +1850,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "LightGBM/3.3.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6LwKO13R9q8zZHbYNeHhayUj3/sN410L6B9QZfV/tyzuoaddur1Uy0yV0gK4FfLl3FVC0LxnfiCOrHva0xX3yQ==",
+      "path": "lightgbm/3.3.5",
+      "hashPath": "lightgbm.3.3.5.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/8.0.19": {
       "type": "package",
@@ -2019,6 +2186,34 @@
       "sha512": "sha512-k8q9UwoCG5WpwnvPS3s46yNU+wkMgAC5F/8OELpPbozcyJw0DZL8WnpnL/mw7E218Ec4SpYz+nxL9P87eAdzmg==",
       "path": "microsoft.ml.dataview/4.0.2",
       "hashPath": "microsoft.ml.dataview.4.0.2.nupkg.sha512"
+    },
+    "Microsoft.ML.FastTree/4.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a/1kEgAqGakxE5DZCh9Xk4XJeyjaowUV4JpgZW6LJAQvufRp/4ZHAUDXJE4T1sOHoFzWsmPeBqDAlzlAgKH6Eg==",
+      "path": "microsoft.ml.fasttree/4.0.2",
+      "hashPath": "microsoft.ml.fasttree.4.0.2.nupkg.sha512"
+    },
+    "Microsoft.ML.LightGbm/4.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2vaz6k2jwgDedUw9iaSOoqGdo+OYAI+y4P14uWBHmMnybkuo6udW8esAuRwW2bi/fRWxIPHKxjOLwRADg9zwTw==",
+      "path": "microsoft.ml.lightgbm/4.0.2",
+      "hashPath": "microsoft.ml.lightgbm.4.0.2.nupkg.sha512"
+    },
+    "Microsoft.ML.Mkl.Redist/4.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SUXhH7OdbMTvnHMEISqCudIcbolQeSyq2icnlBc1GUdhUDy/q/8itbQ/qpnOdQLTlKbUqF2lzM/ChlQVz2CRaQ==",
+      "path": "microsoft.ml.mkl.redist/4.0.2",
+      "hashPath": "microsoft.ml.mkl.redist.4.0.2.nupkg.sha512"
+    },
+    "Microsoft.ML.TimeSeries/4.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kvEA81gXW6iX8owvlX0bGipDejEdpqVcaPmTD8KJioc2m6/SdUdx5HfdjikSiWqo1yHYyaQmX5yZBC6lEs9HTg==",
+      "path": "microsoft.ml.timeseries/4.0.2",
+      "hashPath": "microsoft.ml.timeseries.4.0.2.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
